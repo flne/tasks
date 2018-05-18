@@ -26,4 +26,4 @@ CREATE TABLE relations (
 SELECT authors.name, count(authors_id) AS number_of_books FROM authors 
 LEFT JOIN relations ON relations.authors_id = authors.id 
 GROUP BY authors.name 
-HAVING number_of_books <= 7
+HAVING number_of_books < 7
